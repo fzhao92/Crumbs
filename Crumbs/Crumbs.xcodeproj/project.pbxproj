@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE8A891E02ED20007FF771 /* AppDelegate.swift */; };
+		3FBE8A8C1E02ED20007FF771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE8A8B1E02ED20007FF771 /* ViewController.swift */; };
+		3FBE8A8F1E02ED20007FF771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A8D1E02ED20007FF771 /* Main.storyboard */; };
+		3FBE8A911E02ED20007FF771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A901E02ED20007FF771 /* Assets.xcassets */; };
+		3FBE8A941E02ED20007FF771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */; };
+		3FBE8A9C1E02EE43007FF771 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A9B1E02EE43007FF771 /* GoogleService-Info.plist */; };
+		9CAA486BE1F30376FF51F914 /* Pods_Crumbs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E31590BD81EEB617F2D87A2 /* Pods_Crumbs.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3FBE8A861E02ED20007FF771 /* Crumbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crumbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FBE8A891E02ED20007FF771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FBE8A8B1E02ED20007FF771 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FBE8A8E1E02ED20007FF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FBE8A901E02ED20007FF771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FBE8A931E02ED20007FF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FBE8A951E02ED20007FF771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FBE8A9B1E02EE43007FF771 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E31590BD81EEB617F2D87A2 /* Pods_Crumbs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crumbs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84427CDDF0289619C506C7EC /* Pods-Crumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crumbs/Pods-Crumbs.release.xcconfig"; sourceTree = "<group>"; };
+		A468023577D2F60C9AAB0D91 /* Pods-Crumbs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crumbs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Crumbs/Pods-Crumbs.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FBE8A831E02ED20007FF771 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAA486BE1F30376FF51F914 /* Pods_Crumbs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FBE8A7D1E02ED20007FF771 = {
+			isa = PBXGroup;
+			children = (
+				3FBE8A881E02ED20007FF771 /* Crumbs */,
+				3FBE8A871E02ED20007FF771 /* Products */,
+				8BAAB58DD0650E503EA4B1FE /* Pods */,
+				948CCBD2449FF716676CE1DB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3FBE8A871E02ED20007FF771 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FBE8A861E02ED20007FF771 /* Crumbs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FBE8A881E02ED20007FF771 /* Crumbs */ = {
+			isa = PBXGroup;
+			children = (
+				3FBE8A9B1E02EE43007FF771 /* GoogleService-Info.plist */,
+				3FBE8A891E02ED20007FF771 /* AppDelegate.swift */,
+				3FBE8A8B1E02ED20007FF771 /* ViewController.swift */,
+				3FBE8A8D1E02ED20007FF771 /* Main.storyboard */,
+				3FBE8A901E02ED20007FF771 /* Assets.xcassets */,
+				3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */,
+				3FBE8A951E02ED20007FF771 /* Info.plist */,
+			);
+			path = Crumbs;
+			sourceTree = "<group>";
+		};
+		8BAAB58DD0650E503EA4B1FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A468023577D2F60C9AAB0D91 /* Pods-Crumbs.debug.xcconfig */,
+				84427CDDF0289619C506C7EC /* Pods-Crumbs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		948CCBD2449FF716676CE1DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E31590BD81EEB617F2D87A2 /* Pods_Crumbs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FBE8A851E02ED20007FF771 /* Crumbs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FBE8A981E02ED20007FF771 /* Build configuration list for PBXNativeTarget "Crumbs" */;
+			buildPhases = (
+				81CA953E3EB4544C43361A68 /* [CP] Check Pods Manifest.lock */,
+				3FBE8A821E02ED20007FF771 /* Sources */,
+				3FBE8A831E02ED20007FF771 /* Frameworks */,
+				3FBE8A841E02ED20007FF771 /* Resources */,
+				D58384FB65362AF0EADA7A3E /* [CP] Embed Pods Frameworks */,
+				B254FAC4B329CCE05DE0ED7B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Crumbs;
+			productName = Crumbs;
+			productReference = 3FBE8A861E02ED20007FF771 /* Crumbs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FBE8A7E1E02ED20007FF771 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ForrestApps;
+				TargetAttributes = {
+					3FBE8A851E02ED20007FF771 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = H2562XJSGY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3FBE8A811E02ED20007FF771 /* Build configuration list for PBXProject "Crumbs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FBE8A7D1E02ED20007FF771;
+			productRefGroup = 3FBE8A871E02ED20007FF771 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FBE8A851E02ED20007FF771 /* Crumbs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FBE8A841E02ED20007FF771 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FBE8A941E02ED20007FF771 /* LaunchScreen.storyboard in Resources */,
+				3FBE8A9C1E02EE43007FF771 /* GoogleService-Info.plist in Resources */,
+				3FBE8A911E02ED20007FF771 /* Assets.xcassets in Resources */,
+				3FBE8A8F1E02ED20007FF771 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81CA953E3EB4544C43361A68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B254FAC4B329CCE05DE0ED7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Crumbs/Pods-Crumbs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D58384FB65362AF0EADA7A3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Crumbs/Pods-Crumbs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FBE8A821E02ED20007FF771 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FBE8A8C1E02ED20007FF771 /* ViewController.swift in Sources */,
+				3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FBE8A8D1E02ED20007FF771 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FBE8A8E1E02ED20007FF771 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FBE8A931E02ED20007FF771 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FBE8A961E02ED20007FF771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FBE8A971E02ED20007FF771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FBE8A991E02ED20007FF771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A468023577D2F60C9AAB0D91 /* Pods-Crumbs.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H2562XJSGY;
+				INFOPLIST_FILE = Crumbs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ForrestApps.Crumbs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3FBE8A9A1E02ED20007FF771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84427CDDF0289619C506C7EC /* Pods-Crumbs.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H2562XJSGY;
+				INFOPLIST_FILE = Crumbs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ForrestApps.Crumbs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FBE8A811E02ED20007FF771 /* Build configuration list for PBXProject "Crumbs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FBE8A961E02ED20007FF771 /* Debug */,
+				3FBE8A971E02ED20007FF771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FBE8A981E02ED20007FF771 /* Build configuration list for PBXNativeTarget "Crumbs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FBE8A991E02ED20007FF771 /* Debug */,
+				3FBE8A9A1E02ED20007FF771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FBE8A7E1E02ED20007FF771 /* Project object */;
+}
