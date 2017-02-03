@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1A76331E44038200541C3D /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A76321E44038200541C3D /* Secrets.swift */; };
+		3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A76341E4407D200541C3D /* GoToCityViewController.swift */; };
 		3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE8A891E02ED20007FF771 /* AppDelegate.swift */; };
-		3FBE8A8C1E02ED20007FF771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE8A8B1E02ED20007FF771 /* ViewController.swift */; };
-		3FBE8A8F1E02ED20007FF771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A8D1E02ED20007FF771 /* Main.storyboard */; };
+		3FBE8A8F1E02ED20007FF771 /* CreateTrail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A8D1E02ED20007FF771 /* CreateTrail.storyboard */; };
 		3FBE8A911E02ED20007FF771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A901E02ED20007FF771 /* Assets.xcassets */; };
 		3FBE8A941E02ED20007FF771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */; };
 		3FBE8A9C1E02EE43007FF771 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A9B1E02EE43007FF771 /* GoogleService-Info.plist */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F1A76321E44038200541C3D /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		3F1A76341E4407D200541C3D /* GoToCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToCityViewController.swift; sourceTree = "<group>"; };
 		3FBE8A861E02ED20007FF771 /* Crumbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crumbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBE8A891E02ED20007FF771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FBE8A8B1E02ED20007FF771 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3FBE8A8E1E02ED20007FF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FBE8A8E1E02ED20007FF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CreateTrail.storyboard; sourceTree = "<group>"; };
 		3FBE8A901E02ED20007FF771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FBE8A931E02ED20007FF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FBE8A951E02ED20007FF771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,11 +67,12 @@
 			children = (
 				3FBE8A9B1E02EE43007FF771 /* GoogleService-Info.plist */,
 				3FBE8A891E02ED20007FF771 /* AppDelegate.swift */,
-				3FBE8A8B1E02ED20007FF771 /* ViewController.swift */,
-				3FBE8A8D1E02ED20007FF771 /* Main.storyboard */,
+				3FBE8A8D1E02ED20007FF771 /* CreateTrail.storyboard */,
 				3FBE8A901E02ED20007FF771 /* Assets.xcassets */,
 				3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */,
 				3FBE8A951E02ED20007FF771 /* Info.plist */,
+				3F1A76321E44038200541C3D /* Secrets.swift */,
+				3F1A76341E4407D200541C3D /* GoToCityViewController.swift */,
 			);
 			path = Crumbs;
 			sourceTree = "<group>";
@@ -157,7 +160,7 @@
 				3FBE8A941E02ED20007FF771 /* LaunchScreen.storyboard in Resources */,
 				3FBE8A9C1E02EE43007FF771 /* GoogleService-Info.plist in Resources */,
 				3FBE8A911E02ED20007FF771 /* Assets.xcassets in Resources */,
-				3FBE8A8F1E02ED20007FF771 /* Main.storyboard in Resources */,
+				3FBE8A8F1E02ED20007FF771 /* CreateTrail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +179,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B254FAC4B329CCE05DE0ED7B /* [CP] Copy Pods Resources */ = {
@@ -216,20 +219,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FBE8A8C1E02ED20007FF771 /* ViewController.swift in Sources */,
+				3F1A76331E44038200541C3D /* Secrets.swift in Sources */,
 				3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */,
+				3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3FBE8A8D1E02ED20007FF771 /* Main.storyboard */ = {
+		3FBE8A8D1E02ED20007FF771 /* CreateTrail.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3FBE8A8E1E02ED20007FF771 /* Base */,
 			);
-			name = Main.storyboard;
+			name = CreateTrail.storyboard;
 			sourceTree = "<group>";
 		};
 		3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */ = {
@@ -381,6 +385,7 @@
 				3FBE8A9A1E02ED20007FF771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

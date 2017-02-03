@@ -7,4 +7,6 @@ target 'Crumbs' do
 
   # Pods for Crumbs
   pod 'Firebase/Core'
+  pod 'Alamofire'
+  pod 'GooglePlaces'
 end
