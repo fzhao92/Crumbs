@@ -6,16 +6,6 @@
 //  Copyright © 2017 ForrestApps. All rights reserved.
 //
 
-import Foundation
-
-
-//
-//  Locatoin.swift
-//  Crumbs
-//
-//  Created by Forrest Zhao on 11/19/16.
-//  Copyright © 2016 NY3. All rights reserved.
-//
 import UIKit
 import FirebaseDatabase
 
@@ -27,8 +17,7 @@ struct Location {
     var latitude: Double
     var longitude: Double
     var placeInLine: Int
-    //var image: UIImage?
-    //    var description: String?
+    var description: String?
     
     let ref: FIRDatabaseReference?
     
@@ -40,6 +29,7 @@ struct Location {
         self.longitude = longitude
         self.placeInLine = placeInLine
         self.ref = nil
+        self.description = nil
     }
     
     init(snapshot: FIRDataSnapshot) {
@@ -50,7 +40,7 @@ struct Location {
         self.latitude = snapshotValue["latitude"] as! Double
         self.longitude = snapshotValue["longitude"] as! Double
         self.placeInLine = snapshotValue["placeInLine"] as! Int
-        //        self.description = snapshotValue["description"] as? String
+        self.description = snapshotValue["description"] as? String
         ref = snapshot.ref
     }
     
@@ -60,8 +50,8 @@ struct Location {
             "name": name,
             "latitude": latitude,
             "longitude": longitude,
-            "placeInLine": placeInLine
-            //            "description": description!
+            "placeInLine": placeInLine,
+            "description": description!
         ]
     }
     

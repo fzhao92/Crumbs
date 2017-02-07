@@ -12,6 +12,7 @@
 		3F9A80FF1E4A858200E5466C /* CreateTrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */; };
 		3F9A81021E4A85BA00E5466C /* CreateTrailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */; };
 		3F9A81051E4A861200E5466C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81041E4A861200E5466C /* Location.swift */; };
+		3F9A81071E4A874100E5466C /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81061E4A874100E5466C /* Trail.swift */; };
 		3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE8A891E02ED20007FF771 /* AppDelegate.swift */; };
 		3FBE8A8F1E02ED20007FF771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A8D1E02ED20007FF771 /* Main.storyboard */; };
 		3FBE8A911E02ED20007FF771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A901E02ED20007FF771 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewController.swift; sourceTree = "<group>"; };
 		3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewModel.swift; sourceTree = "<group>"; };
 		3F9A81041E4A861200E5466C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3F9A81061E4A874100E5466C /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trail.swift; sourceTree = "<group>"; };
 		3FBE8A861E02ED20007FF771 /* Crumbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crumbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBE8A891E02ED20007FF771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FBE8A8E1E02ED20007FF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				3F9A81001E4A85A800E5466C /* Views */,
 				3F9A81031E4A860700E5466C /* View Models */,
 				3F9A81041E4A861200E5466C /* Location.swift */,
+				3F9A81061E4A874100E5466C /* Trail.swift */,
 			);
 			path = Crumbs;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */,
 				3F9A81051E4A861200E5466C /* Location.swift in Sources */,
 				3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */,
+				3F9A81071E4A874100E5466C /* Trail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
