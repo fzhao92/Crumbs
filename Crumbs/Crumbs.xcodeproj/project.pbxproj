@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		3F1A76331E44038200541C3D /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A76321E44038200541C3D /* Secrets.swift */; };
 		3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A76341E4407D200541C3D /* GoToCityViewController.swift */; };
+		3F9A80FF1E4A858200E5466C /* CreateTrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */; };
+		3F9A81021E4A85BA00E5466C /* CreateTrailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */; };
+		3F9A81051E4A861200E5466C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81041E4A861200E5466C /* Location.swift */; };
 		3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE8A891E02ED20007FF771 /* AppDelegate.swift */; };
-		3FBE8A8F1E02ED20007FF771 /* CreateTrail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A8D1E02ED20007FF771 /* CreateTrail.storyboard */; };
+		3FBE8A8F1E02ED20007FF771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A8D1E02ED20007FF771 /* Main.storyboard */; };
 		3FBE8A911E02ED20007FF771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A901E02ED20007FF771 /* Assets.xcassets */; };
 		3FBE8A941E02ED20007FF771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */; };
 		3FBE8A9C1E02EE43007FF771 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE8A9B1E02EE43007FF771 /* GoogleService-Info.plist */; };
@@ -20,9 +23,12 @@
 /* Begin PBXFileReference section */
 		3F1A76321E44038200541C3D /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		3F1A76341E4407D200541C3D /* GoToCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToCityViewController.swift; sourceTree = "<group>"; };
+		3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewController.swift; sourceTree = "<group>"; };
+		3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewModel.swift; sourceTree = "<group>"; };
+		3F9A81041E4A861200E5466C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3FBE8A861E02ED20007FF771 /* Crumbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crumbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBE8A891E02ED20007FF771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FBE8A8E1E02ED20007FF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CreateTrail.storyboard; sourceTree = "<group>"; };
+		3FBE8A8E1E02ED20007FF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FBE8A901E02ED20007FF771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FBE8A931E02ED20007FF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FBE8A951E02ED20007FF771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +50,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1A76361E4409C900541C3D /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				3F1A76341E4407D200541C3D /* GoToCityViewController.swift */,
+			);
+			name = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		3F9A81001E4A85A800E5466C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3F9A81031E4A860700E5466C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
 		3FBE8A7D1E02ED20007FF771 = {
 			isa = PBXGroup;
 			children = (
@@ -67,12 +97,15 @@
 			children = (
 				3FBE8A9B1E02EE43007FF771 /* GoogleService-Info.plist */,
 				3FBE8A891E02ED20007FF771 /* AppDelegate.swift */,
-				3FBE8A8D1E02ED20007FF771 /* CreateTrail.storyboard */,
+				3FBE8A8D1E02ED20007FF771 /* Main.storyboard */,
 				3FBE8A901E02ED20007FF771 /* Assets.xcassets */,
 				3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */,
 				3FBE8A951E02ED20007FF771 /* Info.plist */,
 				3F1A76321E44038200541C3D /* Secrets.swift */,
-				3F1A76341E4407D200541C3D /* GoToCityViewController.swift */,
+				3F1A76361E4409C900541C3D /* GooglePlaces */,
+				3F9A81001E4A85A800E5466C /* Views */,
+				3F9A81031E4A860700E5466C /* View Models */,
+				3F9A81041E4A861200E5466C /* Location.swift */,
 			);
 			path = Crumbs;
 			sourceTree = "<group>";
@@ -160,7 +193,7 @@
 				3FBE8A941E02ED20007FF771 /* LaunchScreen.storyboard in Resources */,
 				3FBE8A9C1E02EE43007FF771 /* GoogleService-Info.plist in Resources */,
 				3FBE8A911E02ED20007FF771 /* Assets.xcassets in Resources */,
-				3FBE8A8F1E02ED20007FF771 /* CreateTrail.storyboard in Resources */,
+				3FBE8A8F1E02ED20007FF771 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F1A76331E44038200541C3D /* Secrets.swift in Sources */,
+				3F9A80FF1E4A858200E5466C /* CreateTrailViewController.swift in Sources */,
+				3F9A81021E4A85BA00E5466C /* CreateTrailViewModel.swift in Sources */,
 				3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */,
+				3F9A81051E4A861200E5466C /* Location.swift in Sources */,
 				3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,12 +264,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3FBE8A8D1E02ED20007FF771 /* CreateTrail.storyboard */ = {
+		3FBE8A8D1E02ED20007FF771 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3FBE8A8E1E02ED20007FF771 /* Base */,
 			);
-			name = CreateTrail.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */ = {
