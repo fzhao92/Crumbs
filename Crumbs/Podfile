@@ -10,4 +10,5 @@ target 'Crumbs' do
   pod 'Firebase/Database'
   pod 'Alamofire'
   pod 'GooglePlaces'
+  pod 'SwiftyJSON'
 end

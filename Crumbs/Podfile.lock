@@ -27,12 +27,14 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
   - Firebase/Core
   - Firebase/Database
   - GooglePlaces
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
@@ -46,7 +48,8 @@ SPEC CHECKSUMS:
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: b2cf39afc51bdf2de5a4af11e1dfa8945d7ad922
+PODFILE CHECKSUM: a6e8a1cb0846ccb1b0801ae7e7cb0fa149e356c5
 
 COCOAPODS: 1.2.0.beta.1
