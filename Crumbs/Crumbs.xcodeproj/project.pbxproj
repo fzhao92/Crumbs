@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F1A76331E44038200541C3D /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A76321E44038200541C3D /* Secrets.swift */; };
 		3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A76341E4407D200541C3D /* GoToCityViewController.swift */; };
 		3F9A80FF1E4A858200E5466C /* CreateTrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */; };
 		3F9A81021E4A85BA00E5466C /* CreateTrailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */; };
@@ -22,11 +21,11 @@
 		3FF1EC621E5B937B00C84D56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1EC611E5B937B00C84D56 /* User.swift */; };
 		3FF1EC641E5B997200C84D56 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1EC631E5B997200C84D56 /* Annotation.swift */; };
 		3FF1EC661E5BA9A000C84D56 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1EC651E5BA9A000C84D56 /* Extensions.swift */; };
-		9CAA486BE1F30376FF51F914 /* Pods_Crumbs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E31590BD81EEB617F2D87A2 /* Pods_Crumbs.framework */; };
+		90DAF2F41E5B830B00C99205 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAF2F31E5B830B00C99205 /* Secrets.swift */; };
+		9CAA486BE1F30376FF51F914 /* Pods_Crumbs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E31590BD81EEB617F2D87A2 /* Pods_Crumbs.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F1A76321E44038200541C3D /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		3F1A76341E4407D200541C3D /* GoToCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToCityViewController.swift; sourceTree = "<group>"; };
 		3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewController.swift; sourceTree = "<group>"; };
 		3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewModel.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		3FF1EC651E5BA9A000C84D56 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7E31590BD81EEB617F2D87A2 /* Pods_Crumbs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crumbs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84427CDDF0289619C506C7EC /* Pods-Crumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crumbs/Pods-Crumbs.release.xcconfig"; sourceTree = "<group>"; };
+		90DAF2F31E5B830B00C99205 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		A468023577D2F60C9AAB0D91 /* Pods-Crumbs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crumbs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Crumbs/Pods-Crumbs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +63,6 @@
 		3F1A76361E4409C900541C3D /* GooglePlaces */ = {
 			isa = PBXGroup;
 			children = (
-				3F1A76341E4407D200541C3D /* GoToCityViewController.swift */,
 			);
 			name = GooglePlaces;
 			sourceTree = "<group>";
@@ -119,16 +118,17 @@
 			isa = PBXGroup;
 			children = (
 				3FBE8A9B1E02EE43007FF771 /* GoogleService-Info.plist */,
+				90DAF2F31E5B830B00C99205 /* Secrets.swift */,
 				3FBE8A891E02ED20007FF771 /* AppDelegate.swift */,
-				3FBE8A8D1E02ED20007FF771 /* Main.storyboard */,
-				3FBE8A901E02ED20007FF771 /* Assets.xcassets */,
-				3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */,
-				3FBE8A951E02ED20007FF771 /* Info.plist */,
-				3F1A76321E44038200541C3D /* Secrets.swift */,
 				3F1A76361E4409C900541C3D /* GooglePlaces */,
 				3F9A81001E4A85A800E5466C /* Views */,
 				3F9A81031E4A860700E5466C /* View Models */,
 				3F9A81081E4A93F900E5466C /* Models */,
+				3FBE8A8D1E02ED20007FF771 /* Main.storyboard */,
+				3FBE8A901E02ED20007FF771 /* Assets.xcassets */,
+				3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */,
+				3FBE8A951E02ED20007FF771 /* Info.plist */,
+				3F1A76341E4407D200541C3D /* GoToCityViewController.swift */,
 			);
 			path = Crumbs;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 				TargetAttributes = {
 					3FBE8A851E02ED20007FF771 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = H2562XJSGY;
+						DevelopmentTeam = LL5C5F8ENK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -276,13 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F9A810A1E4A941100E5466C /* CityRegion.swift in Sources */,
-				3F1A76331E44038200541C3D /* Secrets.swift in Sources */,
 				3F9A80FF1E4A858200E5466C /* CreateTrailViewController.swift in Sources */,
 				3F9A81021E4A85BA00E5466C /* CreateTrailViewModel.swift in Sources */,
 				3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */,
 				3FF1EC641E5B997200C84D56 /* Annotation.swift in Sources */,
 				3FF1EC621E5B937B00C84D56 /* User.swift in Sources */,
 				3F9A81051E4A861200E5466C /* Location.swift in Sources */,
+				90DAF2F41E5B830B00C99205 /* Secrets.swift in Sources */,
 				3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */,
 				3FF1EC661E5BA9A000C84D56 /* Extensions.swift in Sources */,
 				3F9A81071E4A874100E5466C /* Trail.swift in Sources */,
@@ -407,7 +407,7 @@
 			baseConfigurationReference = A468023577D2F60C9AAB0D91 /* Pods-Crumbs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H2562XJSGY;
+				DEVELOPMENT_TEAM = LL5C5F8ENK;
 				INFOPLIST_FILE = Crumbs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ForrestApps.Crumbs;
@@ -421,7 +421,7 @@
 			baseConfigurationReference = 84427CDDF0289619C506C7EC /* Pods-Crumbs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H2562XJSGY;
+				DEVELOPMENT_TEAM = LL5C5F8ENK;
 				INFOPLIST_FILE = Crumbs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ForrestApps.Crumbs;
