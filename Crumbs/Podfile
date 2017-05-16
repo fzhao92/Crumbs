@@ -11,4 +11,6 @@ target 'Crumbs' do
   pod 'Alamofire'
   pod 'GooglePlaces'
   pod 'SwiftyJSON'
+  pod 'SnapKit', '~> 3.2.0'
+  pod 'Validator'
 end

@@ -6,7 +6,7 @@
 //  Copyright © 2017 ForrestApps. All rights reserved.
 //
 
-import Foundation
+import SwiftyJSON
 import FirebaseDatabase
 
 struct User {
@@ -27,10 +27,9 @@ struct User {
     
     init(snapshot: FIRDataSnapshot) {
         key  = snapshot.key
-        let snapshotValue = snapshot.value as! [String: Any]
-        self.name = snapshotValue["name"] as! String
-        self.profileUrl = snapshotValue["profileUrl"] as! String
-        self.trails = snapshotValue["trails"] as! [String: Bool]
+        self.name = snapshot.json["name"].stringValue
+        self.profileUrl = snapshot.json["profileUrl"].stringValue
+        self.trails = snapshot.json["trails"].dictionaryObject as! [String : Bool]
         ref = snapshot.ref
     }
     

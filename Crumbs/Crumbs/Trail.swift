@@ -37,7 +37,6 @@ struct Trail {
         for (key, value) in locationObjects {
             locations[key] = Location(dict: value)
         }
-        
         ref = snapshot.ref
     }
     

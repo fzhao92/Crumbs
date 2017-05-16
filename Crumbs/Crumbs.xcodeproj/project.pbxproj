@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A76341E4407D200541C3D /* GoToCityViewController.swift */; };
+		3F58C3081ECA86E80014C00F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C3071ECA86E80014C00F /* RegistrationViewController.swift */; };
+		3F58C30B1ECA8B630014C00F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C30A1ECA8B630014C00F /* RegistrationViewModel.swift */; };
+		3F58C30E1ECA8B9D0014C00F /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C30D1ECA8B9D0014C00F /* UserRegistration.swift */; };
 		3F9A80FF1E4A858200E5466C /* CreateTrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */; };
 		3F9A81021E4A85BA00E5466C /* CreateTrailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */; };
 		3F9A81051E4A861200E5466C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81041E4A861200E5466C /* Location.swift */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		3F1A76341E4407D200541C3D /* GoToCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToCityViewController.swift; sourceTree = "<group>"; };
+		3F58C3071ECA86E80014C00F /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		3F58C30A1ECA8B630014C00F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		3F58C30D1ECA8B9D0014C00F /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
 		3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewController.swift; sourceTree = "<group>"; };
 		3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewModel.swift; sourceTree = "<group>"; };
 		3F9A81041E4A861200E5466C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -60,11 +66,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F0C82B21E6A0EB400BB73AF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		3F1A76361E4409C900541C3D /* GooglePlaces */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		3F58C3061ECA86C20014C00F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F1A76341E4407D200541C3D /* GoToCityViewController.swift */,
+				3F58C3071ECA86E80014C00F /* RegistrationViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3F58C3091ECA8AC80014C00F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3FF1EC651E5BA9A000C84D56 /* Extensions.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3F58C30C1ECA8B820014C00F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3F58C30D1ECA8B9D0014C00F /* UserRegistration.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		3F9A81001E4A85A800E5466C /* Views */ = {
@@ -79,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */,
+				3F58C30A1ECA8B630014C00F /* RegistrationViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -91,7 +130,6 @@
 				3F9A81091E4A941100E5466C /* CityRegion.swift */,
 				3FF1EC611E5B937B00C84D56 /* User.swift */,
 				3FF1EC631E5B997200C84D56 /* Annotation.swift */,
-				3FF1EC651E5BA9A000C84D56 /* Extensions.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -117,6 +155,9 @@
 		3FBE8A881E02ED20007FF771 /* Crumbs */ = {
 			isa = PBXGroup;
 			children = (
+				3F58C30C1ECA8B820014C00F /* Protocols */,
+				3F58C3091ECA8AC80014C00F /* Utils */,
+				3F0C82B21E6A0EB400BB73AF /* Constants */,
 				3FBE8A9B1E02EE43007FF771 /* GoogleService-Info.plist */,
 				90DAF2F31E5B830B00C99205 /* Secrets.swift */,
 				3FBE8A891E02ED20007FF771 /* AppDelegate.swift */,
@@ -128,7 +169,7 @@
 				3FBE8A901E02ED20007FF771 /* Assets.xcassets */,
 				3FBE8A921E02ED20007FF771 /* LaunchScreen.storyboard */,
 				3FBE8A951E02ED20007FF771 /* Info.plist */,
-				3F1A76341E4407D200541C3D /* GoToCityViewController.swift */,
+				3F58C3061ECA86C20014C00F /* View Controllers */,
 			);
 			path = Crumbs;
 			sourceTree = "<group>";
@@ -281,8 +322,11 @@
 				3FBE8A8A1E02ED20007FF771 /* AppDelegate.swift in Sources */,
 				3FF1EC641E5B997200C84D56 /* Annotation.swift in Sources */,
 				3FF1EC621E5B937B00C84D56 /* User.swift in Sources */,
+				3F58C3081ECA86E80014C00F /* RegistrationViewController.swift in Sources */,
+				3F58C30E1ECA8B9D0014C00F /* UserRegistration.swift in Sources */,
 				3F9A81051E4A861200E5466C /* Location.swift in Sources */,
 				90DAF2F41E5B830B00C99205 /* Secrets.swift in Sources */,
+				3F58C30B1ECA8B630014C00F /* RegistrationViewModel.swift in Sources */,
 				3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */,
 				3FF1EC661E5BA9A000C84D56 /* Extensions.swift in Sources */,
 				3F9A81071E4A874100E5466C /* Trail.swift in Sources */,
