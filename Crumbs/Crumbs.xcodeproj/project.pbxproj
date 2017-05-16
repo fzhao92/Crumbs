@@ -11,6 +11,7 @@
 		3F58C3081ECA86E80014C00F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C3071ECA86E80014C00F /* RegistrationViewController.swift */; };
 		3F58C30B1ECA8B630014C00F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C30A1ECA8B630014C00F /* RegistrationViewModel.swift */; };
 		3F58C30E1ECA8B9D0014C00F /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C30D1ECA8B9D0014C00F /* UserRegistration.swift */; };
+		3F58C3111ECA99600014C00F /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C3101ECA99600014C00F /* ValidationErrors.swift */; };
 		3F9A80FF1E4A858200E5466C /* CreateTrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */; };
 		3F9A81021E4A85BA00E5466C /* CreateTrailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */; };
 		3F9A81051E4A861200E5466C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81041E4A861200E5466C /* Location.swift */; };
@@ -33,6 +34,7 @@
 		3F58C3071ECA86E80014C00F /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		3F58C30A1ECA8B630014C00F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		3F58C30D1ECA8B9D0014C00F /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
+		3F58C3101ECA99600014C00F /* ValidationErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
 		3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewController.swift; sourceTree = "<group>"; };
 		3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewModel.swift; sourceTree = "<group>"; };
 		3F9A81041E4A861200E5466C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		3F58C30F1ECA99530014C00F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				3F58C3101ECA99600014C00F /* ValidationErrors.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
 		3F9A81001E4A85A800E5466C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 		3FBE8A881E02ED20007FF771 /* Crumbs */ = {
 			isa = PBXGroup;
 			children = (
+				3F58C30F1ECA99530014C00F /* Enums */,
 				3F58C30C1ECA8B820014C00F /* Protocols */,
 				3F58C3091ECA8AC80014C00F /* Utils */,
 				3F0C82B21E6A0EB400BB73AF /* Constants */,
@@ -316,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F58C3111ECA99600014C00F /* ValidationErrors.swift in Sources */,
 				3F9A810A1E4A941100E5466C /* CityRegion.swift in Sources */,
 				3F9A80FF1E4A858200E5466C /* CreateTrailViewController.swift in Sources */,
 				3F9A81021E4A85BA00E5466C /* CreateTrailViewModel.swift in Sources */,

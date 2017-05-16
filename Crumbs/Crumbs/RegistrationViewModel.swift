@@ -16,6 +16,23 @@ class RegistrationViewModel: UserRegistration {
     var email: String?
     var userName: String?
     var password: String?
+    var passwordRules: ValidationRuleSet<String>
+    var emailRules: ValidationRuleSet<String>
+
+    
+    init() {
+        passwordRules = ValidationRuleSet<String>()
+        emailRules = ValidationRuleSet<String>()
+    }
+    
+    
+    func setupRules() {
+        let lengthRule = ValidationRuleLength(min: 6, max: 50, error: PasswordValidationErrors.invalidLength)
+        passwordRules.add(rule: lengthRule)
+        
+        let emailFormatRule = ValidationRulePattern(pattern: EmailValidationPattern.standard, error: EmailValidationErrors.invalidFormat)
+        emailRules.add(rule: emailFormatRule)
+    }
     
     func validatePassword() -> Bool {
         return true
