@@ -10,14 +10,6 @@ import Foundation
 
 protocol UserRegistration {
     
-    func validatePassword() -> Bool
-    
-    func validateUserName() -> Bool
-    
-    func validateEmail() -> Bool
-    
-    func validateFirstName() -> Bool
-    
-    func validateLastName() -> Bool
+    func createUser()
     
 }

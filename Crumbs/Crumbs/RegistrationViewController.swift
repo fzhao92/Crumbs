@@ -14,6 +14,8 @@ import Validator
 class RegistrationViewController: UIViewController {
     
     var registrationViewModel: UserRegistration?
+    var passwordRules: ValidationRuleSet<String> = ValidationRuleSet<String>()
+    var emailRules: ValidationRuleSet<String> = ValidationRuleSet<String>()
     
     lazy var plusPhotoButton: UIButton = {
         let button = UIButton()
@@ -50,8 +52,7 @@ class RegistrationViewController: UIViewController {
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
-//        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
+        tf.addTarget(self, action: #selector(handleEmailTextInputChange), for: .editingChanged)
         return tf
     }()
     
@@ -85,13 +86,19 @@ class RegistrationViewController: UIViewController {
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.white, for: .normal)
-//        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
         button.isEnabled = false
         return button
     }()
+    
+    func handleSignup() {
+        registrationViewModel?.createUser()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        registrationViewModel = RegistrationViewModel()
+        setupValidationRules()
         setupPhotoButton()
         setupInputFields()
         // Do any additional setup after loading the view.
@@ -100,6 +107,15 @@ class RegistrationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    fileprivate func setupValidationRules() {
+        
+        let lengthRule = ValidationRuleLength(min: 6, max: 50, error: PasswordValidationErrors.invalidLength)
+        passwordRules.add(rule: lengthRule)
+        
+        let emailFormatRule = ValidationRulePattern(pattern: EmailValidationPattern.standard, error: EmailValidationErrors.invalidFormat)
+        emailRules.add(rule: emailFormatRule)
     }
     
     fileprivate func setupPhotoButton() {
@@ -115,7 +131,6 @@ class RegistrationViewController: UIViewController {
     fileprivate func setupInputFields() {
         let stackView = UIStackView(arrangedSubviews: [firstNameTextField, lastNameTextField, emailTextField,
                                                        usernameTextField, passwordTextField, signUpButton])
-        
         view.addSubview(stackView)
         
         stackView.distribution = .fillEqually
@@ -128,6 +143,38 @@ class RegistrationViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-40)
             make.height.equalToSuperview().multipliedBy(0.5)
         }
+        
+        emailTextField.validationRules = emailRules
+        passwordTextField.validationRules = passwordRules
     }
+    
+    // - MARK: textfield selector methods
+    
+    func handleEmailTextInputChange() {
+        emailTextField.validationHandler = { result in
+            switch result  {
+            case .valid:
+                print("VAlid!")
+            case . invalid(let failureErrors):
+                let messages = failureErrors.map( { $0 } )
+                print("invalid", messages)
+            }
+        }
+        emailTextField.validateOnInputChange(enabled: true)
+    }
+    
+    func handlePasswordTextInputChange() {
+        passwordTextField.validationHandler { result in
+            switch result {
+            case .valid:
+                print("VAlid!")
+            case . invalid(let failureErrors):
+                let messages = failureErrors.map( { $0 } )
+                print("invalid", messages)
+            }
+        }
+        passwordTextField.validateOnInputChange(enabled: true)
+    }
+    
 
 }
