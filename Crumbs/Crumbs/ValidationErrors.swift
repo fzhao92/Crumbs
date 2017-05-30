@@ -23,3 +23,11 @@ enum PasswordValidationErrors: String, Error, CustomStringConvertible {
         return self.rawValue
     }
 }
+
+enum GeneralValidationErrors: String, Error, CustomStringConvertible {
+    case invalidLength = "Must not be empty"
+    
+    var description: String {
+        return self.rawValue
+    }
+}

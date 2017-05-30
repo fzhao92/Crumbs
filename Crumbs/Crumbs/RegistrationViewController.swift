@@ -16,6 +16,7 @@ class RegistrationViewController: UIViewController {
     var registrationViewModel: UserRegistration?
     var passwordRules: ValidationRuleSet<String> = ValidationRuleSet<String>()
     var emailRules: ValidationRuleSet<String> = ValidationRuleSet<String>()
+    var generalRules: ValidationRuleSet<String> = ValidationRuleSet<String>()
     
     lazy var plusPhotoButton: UIButton = {
         let button = UIButton()
@@ -27,55 +28,102 @@ class RegistrationViewController: UIViewController {
     
     lazy var firstNameTextField: UITextField = {
         let tf = UITextField()
+        tf.delegate = self
         tf.placeholder = "First Name"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        //        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
+        tf.validationHandler = { result in
+            switch result  {
+            case .valid:
+                print("VAlid!")
+            case . invalid(let failureErrors):
+                let messages = failureErrors.map( { $0 } )
+                print("invalid", messages)
+            }
+        }
+        tf.addTarget(self, action: #selector(validateAllTextFields), for: .editingChanged)
         return tf
     }()
     
     lazy var lastNameTextField: UITextField = {
         let tf = UITextField()
+        tf.delegate = self
         tf.placeholder = "Last Name"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
-        //        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
+        tf.validationHandler = { result in
+            switch result  {
+            case .valid:
+                print("VAlid!")
+            case . invalid(let failureErrors):
+                let messages = failureErrors.map( { $0 } )
+                print("invalid", messages)
+            }
+        }
+        tf.addTarget(self, action: #selector(validateAllTextFields), for: .editingChanged)
         return tf
     }()
     
     lazy var emailTextField: UITextField = {
         let tf = UITextField()
+        tf.delegate = self
         tf.placeholder = "Email"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        tf.addTarget(self, action: #selector(handleEmailTextInputChange), for: .editingChanged)
+        tf.validationHandler = { result in
+            switch result  {
+            case .valid:
+                print("VAlid!")
+            case . invalid(let failureErrors):
+                let messages = failureErrors.map( { $0 } )
+                print("invalid", messages)
+            }
+        }
+        tf.addTarget(self, action: #selector(validateAllTextFields), for: .editingChanged)
         return tf
     }()
     
     lazy var usernameTextField: UITextField = {
         let tf = UITextField()
+        tf.delegate = self
         tf.placeholder = "Username"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
-//        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
+        tf.validationHandler = { result in
+            switch result  {
+            case .valid:
+                print("VAlid!")
+            case . invalid(let failureErrors):
+                let messages = failureErrors.map( { $0 } )
+                print("invalid", messages)
+            }
+        }
+        tf.addTarget(self, action: #selector(validateAllTextFields), for: .editingChanged)
         return tf
     }()
     
     lazy var passwordTextField: UITextField = {
         let tf = UITextField()
+        tf.delegate = self
         tf.placeholder = "Password"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.isSecureTextEntry = true
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
-//        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
+        tf.validationHandler = { result in
+            switch result  {
+            case .valid:
+                print("VAlid!")
+            case . invalid(let failureErrors):
+                let messages = failureErrors.map( { $0 } )
+                print("invalid", messages)
+            }
+        }
+        tf.addTarget(self, action: #selector(validateAllTextFields), for: .editingChanged)
         return tf
     }()
     
@@ -90,10 +138,6 @@ class RegistrationViewController: UIViewController {
         button.isEnabled = false
         return button
     }()
-    
-    func handleSignup() {
-        registrationViewModel?.createUser()
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +145,6 @@ class RegistrationViewController: UIViewController {
         setupValidationRules()
         setupPhotoButton()
         setupInputFields()
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -116,6 +159,9 @@ class RegistrationViewController: UIViewController {
         
         let emailFormatRule = ValidationRulePattern(pattern: EmailValidationPattern.standard, error: EmailValidationErrors.invalidFormat)
         emailRules.add(rule: emailFormatRule)
+        
+        let generalLengthRule = ValidationRuleLength(min: 1, max: 50, error: GeneralValidationErrors.invalidLength)
+        generalRules.add(rule: generalLengthRule)
     }
     
     fileprivate func setupPhotoButton() {
@@ -144,37 +190,68 @@ class RegistrationViewController: UIViewController {
             make.height.equalToSuperview().multipliedBy(0.5)
         }
         
+        firstNameTextField.validationRules = generalRules
+        lastNameTextField.validationRules = generalRules
+        usernameTextField.validationRules = generalRules
         emailTextField.validationRules = emailRules
         passwordTextField.validationRules = passwordRules
     }
     
-    // - MARK: textfield selector methods
-    
-    func handleEmailTextInputChange() {
-        emailTextField.validationHandler = { result in
-            switch result  {
-            case .valid:
-                print("VAlid!")
-            case . invalid(let failureErrors):
-                let messages = failureErrors.map( { $0 } )
-                print("invalid", messages)
-            }
+    func handleSignup() {
+        if let firstName = firstNameTextField.text, let lastName = lastNameTextField.text, let username = usernameTextField.text,
+            let email = emailTextField.text, let password = passwordTextField.text {
+            let newUser = User(firstName: firstName, lastName: lastName, userName: username)
+            FirebaseClient.createUser(newUser, withEmail: email, andPassword: password)
         }
-        emailTextField.validateOnInputChange(enabled: true)
     }
     
-    func handlePasswordTextInputChange() {
-        passwordTextField.validationHandler { result in
-            switch result {
-            case .valid:
-                print("VAlid!")
-            case . invalid(let failureErrors):
-                let messages = failureErrors.map( { $0 } )
-                print("invalid", messages)
-            }
+    func validateAllTextFields() {
+        if firstNameTextField.validate().isValid && lastNameTextField.validate().isValid && usernameTextField.validate().isValid
+            && emailTextField.validate().isValid && passwordTextField.validate().isValid {
+            signUpButton.backgroundColor = UIColor.rgb(red: 17, green: 154, blue: 237)
+            signUpButton.isEnabled = true
+        } else {
+            signUpButton.backgroundColor = UIColor.rgb(red: 149, green: 204, blue: 244)
+            signUpButton.isEnabled = false
         }
-        passwordTextField.validateOnInputChange(enabled: true)
     }
-    
 
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case firstNameTextField:
+            firstNameTextField.validateOnInputChange(enabled: true)
+        case lastNameTextField:
+            lastNameTextField.validateOnInputChange(enabled: true)
+        case usernameTextField:
+            usernameTextField.validateOnInputChange(enabled: true)
+        case emailTextField:
+            emailTextField.validateOnInputChange(enabled: true)
+        case passwordTextField:
+            passwordTextField.validateOnInputChange(enabled: true)
+        default:
+            break
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField {
+        case firstNameTextField:
+            firstNameTextField.validateOnInputChange(enabled: false)
+        case lastNameTextField:
+            lastNameTextField.validateOnInputChange(enabled: false)
+        case usernameTextField:
+            usernameTextField.validateOnInputChange(enabled: false)
+        case emailTextField:
+            emailTextField.validateOnInputChange(enabled: false)
+        case passwordTextField:
+            passwordTextField.validateOnInputChange(enabled: false)
+        default:
+            break
+        }
+    }
+    
 }

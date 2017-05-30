@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A76341E4407D200541C3D /* GoToCityViewController.swift */; };
+		3F3C68BE1EDD509E000BD9BE /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C68BD1EDD509E000BD9BE /* FirebaseClient.swift */; };
 		3F58C3081ECA86E80014C00F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C3071ECA86E80014C00F /* RegistrationViewController.swift */; };
-		3F58C30B1ECA8B630014C00F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C30A1ECA8B630014C00F /* RegistrationViewModel.swift */; };
-		3F58C30E1ECA8B9D0014C00F /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C30D1ECA8B9D0014C00F /* UserRegistration.swift */; };
 		3F58C3111ECA99600014C00F /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58C3101ECA99600014C00F /* ValidationErrors.swift */; };
 		3F9A80FF1E4A858200E5466C /* CreateTrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */; };
 		3F9A81021E4A85BA00E5466C /* CreateTrailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */; };
@@ -31,9 +30,8 @@
 
 /* Begin PBXFileReference section */
 		3F1A76341E4407D200541C3D /* GoToCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToCityViewController.swift; sourceTree = "<group>"; };
+		3F3C68BD1EDD509E000BD9BE /* FirebaseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
 		3F58C3071ECA86E80014C00F /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		3F58C30A1ECA8B630014C00F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
-		3F58C30D1ECA8B9D0014C00F /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
 		3F58C3101ECA99600014C00F /* ValidationErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
 		3F9A80FE1E4A858200E5466C /* CreateTrailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewController.swift; sourceTree = "<group>"; };
 		3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrailViewModel.swift; sourceTree = "<group>"; };
@@ -82,6 +80,14 @@
 			name = GooglePlaces;
 			sourceTree = "<group>";
 		};
+		3F3C68BC1EDD508F000BD9BE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3F3C68BD1EDD509E000BD9BE /* FirebaseClient.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		3F58C3061ECA86C20014C00F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +108,6 @@
 		3F58C30C1ECA8B820014C00F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				3F58C30D1ECA8B9D0014C00F /* UserRegistration.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -127,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				3F9A81011E4A85BA00E5466C /* CreateTrailViewModel.swift */,
-				3F58C30A1ECA8B630014C00F /* RegistrationViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -165,6 +169,7 @@
 		3FBE8A881E02ED20007FF771 /* Crumbs */ = {
 			isa = PBXGroup;
 			children = (
+				3F3C68BC1EDD508F000BD9BE /* Networking */,
 				3F58C30F1ECA99530014C00F /* Enums */,
 				3F58C30C1ECA8B820014C00F /* Protocols */,
 				3F58C3091ECA8AC80014C00F /* Utils */,
@@ -335,13 +340,12 @@
 				3FF1EC641E5B997200C84D56 /* Annotation.swift in Sources */,
 				3FF1EC621E5B937B00C84D56 /* User.swift in Sources */,
 				3F58C3081ECA86E80014C00F /* RegistrationViewController.swift in Sources */,
-				3F58C30E1ECA8B9D0014C00F /* UserRegistration.swift in Sources */,
 				3F9A81051E4A861200E5466C /* Location.swift in Sources */,
 				90DAF2F41E5B830B00C99205 /* Secrets.swift in Sources */,
-				3F58C30B1ECA8B630014C00F /* RegistrationViewModel.swift in Sources */,
 				3F1A76351E4407D200541C3D /* GoToCityViewController.swift in Sources */,
 				3FF1EC661E5BA9A000C84D56 /* Extensions.swift in Sources */,
 				3F9A81071E4A874100E5466C /* Trail.swift in Sources */,
+				3F3C68BE1EDD509E000BD9BE /* FirebaseClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
