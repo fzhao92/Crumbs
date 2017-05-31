@@ -13,7 +13,6 @@ import Validator
 
 class RegistrationViewController: UIViewController {
     
-    var registrationViewModel: UserRegistration?
     var passwordRules: ValidationRuleSet<String> = ValidationRuleSet<String>()
     var emailRules: ValidationRuleSet<String> = ValidationRuleSet<String>()
     var generalRules: ValidationRuleSet<String> = ValidationRuleSet<String>()
@@ -22,7 +21,7 @@ class RegistrationViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = UIColor.brown
 //        button.backgroundColor = .clear
-//        button.addTarget(self, action: #selector(handlePlusPhoto), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleAddPhoto), for: .touchUpInside)
         return button
     }()
     
@@ -33,6 +32,7 @@ class RegistrationViewController: UIViewController {
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
+        tf.autocorrectionType = .no
         tf.validationHandler = { result in
             switch result  {
             case .valid:
@@ -53,6 +53,7 @@ class RegistrationViewController: UIViewController {
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
+        tf.spellCheckingType = .no
         tf.validationHandler = { result in
             switch result  {
             case .valid:
@@ -73,6 +74,8 @@ class RegistrationViewController: UIViewController {
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
+        tf.autocorrectionType = .no
+        tf.autocapitalizationType = .no
         tf.validationHandler = { result in
             switch result  {
             case .valid:
@@ -93,6 +96,8 @@ class RegistrationViewController: UIViewController {
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
+        tf.autocorrectionType = .no
+        tf.autocapitalizationType = .none
         tf.validationHandler = { result in
             switch result  {
             case .valid:
@@ -114,6 +119,8 @@ class RegistrationViewController: UIViewController {
         tf.isSecureTextEntry = true
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
+        tf.autocorrectionType = .no
+        tf.autocapitalizationType = .no
         tf.validationHandler = { result in
             switch result  {
             case .valid:
@@ -141,7 +148,6 @@ class RegistrationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        registrationViewModel = RegistrationViewModel()
         setupValidationRules()
         setupPhotoButton()
         setupInputFields()
@@ -200,9 +206,18 @@ class RegistrationViewController: UIViewController {
     func handleSignup() {
         if let firstName = firstNameTextField.text, let lastName = lastNameTextField.text, let username = usernameTextField.text,
             let email = emailTextField.text, let password = passwordTextField.text {
-            let newUser = User(firstName: firstName, lastName: lastName, userName: username)
+            var newUser = User(firstName: firstName, lastName: lastName, userName: username)
+            newUser.profileImage = plusPhotoButton.imageView?.image
             FirebaseClient.createUser(newUser, withEmail: email, andPassword: password)
         }
+    }
+    
+    func handleAddPhoto() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        present(imagePickerController, animated: true, completion: nil)
+        
     }
     
     func validateAllTextFields() {
@@ -252,6 +267,26 @@ extension RegistrationViewController: UITextFieldDelegate {
         default:
             break
         }
+    }
+    
+}
+
+extension RegistrationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            plusPhotoButton.setImage(editedImage, for: .normal)
+        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            plusPhotoButton.setImage(originalImage, for: .normal)
+        }
+        
+        plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width / 2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.layer.borderColor = UIColor.black.cgColor
+        plusPhotoButton.layer.borderWidth = 3
+        
+        dismiss(animated: true, completion: nil)
     }
     
 }

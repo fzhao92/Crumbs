@@ -7,6 +7,7 @@
 //
 
 import SwiftyJSON
+import UIKit
 import FirebaseDatabase
 
 struct User {
@@ -15,6 +16,8 @@ struct User {
     let name: String
     let userName: String
     let trails: [String: Bool]
+    var profileImage: UIImage?
+    var profileImageUrl: String
     let ref: FIRDatabaseReference?
     
     init(firstName: String, lastName: String, userName: String) {
@@ -22,6 +25,7 @@ struct User {
         self.name = "\(firstName) \(lastName)"
         self.userName = userName
         self.trails = [:]
+        self.profileImageUrl = ""
         self.ref = nil
     }
     
@@ -30,14 +34,16 @@ struct User {
         self.name = snapshot.json["name"].stringValue
         self.userName = snapshot.json["username"].stringValue
         self.trails = snapshot.json["trails"].dictionaryObject as! [String : Bool]
+        self.profileImageUrl = snapshot.json["profileImageUrl"].stringValue
         ref = snapshot.ref
     }
     
-    func convertToFirebaseJSON() -> Any {
+    func convertToFirebaseJSON() -> [String: Any] {
         return [
             "name": name,
             "username": userName,
-            "trails": trails
+            "trails": trails,
+            "profileImageUrl": profileImageUrl
         ]
     }
 }
